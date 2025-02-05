@@ -1,9 +1,8 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Body, status
-
-from config.schemas import PromptIn, PromptOut, Chat, OllamaConfig
 import httpx
+from config.schemas import Chat, OllamaConfig, PromptIn, PromptOut
+from fastapi import APIRouter, Body, status
 
 router = APIRouter(prefix="/v1")
 
