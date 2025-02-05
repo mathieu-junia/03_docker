@@ -14,7 +14,7 @@ jobs:
       - name: Build the Docker image
         run: |
           cd backend
-          docker build -f Dockerfile.advancedv2 -t ghcr.io/mathieu-junia/backend:${{ github.sha }} .
+          docker build -f Dockerfile.advancedv2 -t ghcr.io/mathieu-junia/backend:${{ github.sha }} -t ghcr.io/mathieu-junia/backend:latest .
 
       - name: Install and run Container Structure Tests
         run: |
