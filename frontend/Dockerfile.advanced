@@ -18,7 +18,7 @@ COPY /rest /app/rest
 COPY main.py /app/main.py
 
 # Copy the environment
-COPY --from=builder --chown=app:app /app/.venv /app/.venv
+COPY --from=builder /app/.venv /app/.venv
 
 # Set environment variables
 ENV PATH="/app/.venv/bin:$PATH" PYTHONPATH="app/.venv/lib/python3.12/site-packages"

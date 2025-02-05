@@ -1,9 +1,7 @@
 ---
 services:
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile.chisel.full
+    image: ghcr.io/mathieu-junia/backend:latest
     container_name: backend
     ports:
       - 8000:8000
@@ -16,9 +14,7 @@ services:
       - backend-ollama
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile.chisel.full
+    image: ghcr.io/mathieu-junia/frontend:latest
     container_name: frontend
     ports:
       - 8501:8501
